@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* COLORS */
+
+    /* Tailwind Neutral 50 */
+    --color-base: 250, 250, 250;
+    /* Tailwind Neutral 200 */
+    --color-base-gray: 229 229 229;
+    /* Tailwind Neutral 900 */
+    --color-base-black: 23 23 23;
+
+    /* Tailwind Neutral 600 */
+    --color-content: 82 82 82;
+    /* Tailwind Neutral 800 */
+    --color-content-black: 38 38 38;
+    /* Tailwind Neutral 400 */
+    --color-content-gray: 163 163 163;
+    /* Tailwind Neutral 100 */
+    --color-content-white: 245 245 245;
+
+    /* #986D8E */
+    --color-primary: 152 109 142;
+    --color-primary-light: 173 138 165;
+    --color-primary-dark: 122 87 114;
+
+    --color-primary-tint: 234 226 232;
+    --color-primary-shade: 61 44 57;
+
+    /* #87A8A4 */
+    --color-secondary: 135 168 164;
+    --color-secondary-dark: 108 134 131;
+
+    /* FONT FAMILIES */
+    --font-family-font1: 'Montserrat', sans-serif;
+  }
+
+  /* For Webkit-based browsers (Chrome, Safari and Opera) */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* For IE, Edge and Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  html {
+    @apply font-font1 bg-primary-shade sm:bg-gradient-to-br from-primary to-primary-dark text-content-white text-sm/relaxed sm:text-base/relaxed xl:text-lg/relaxed overflow-x-hidden scrollbar-hide selection:bg-primary-dark selection:text-content-white;
+  }
+
+  h1 {
+    @apply text-center text-3xl sm:text-4xl xl:text-5xl tracking-tight font-bold text-content-white;
+  }
+
+  h3 {
+    @apply text-sm sm:text-base xl:text-lg  tracking-wider uppercase font-semibold text-content-white;
+  }
+}
